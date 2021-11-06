@@ -1,9 +1,9 @@
-import streamlit as st 
-import streamlit.components.v1 as stc 
+import streamlit as st
+import streamlit.components.v1 as stc
 
 
 # Load EDA
-import pandas as pd 
+import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity,linear_kernel
 
@@ -11,7 +11,7 @@ from sklearn.metrics.pairwise import cosine_similarity,linear_kernel
 # Load Our Dataset
 def load_data(data):
 	df = pd.read_csv(data)
-	return df 
+	return df
 
 
 # Fxn
@@ -59,7 +59,7 @@ box-shadow:0 0 15px 5px #ccc; background-color: #a8f0c6;
 </div>
 """
 
-# Search For Course 
+# Search For Course
 @st.cache
 def search_term_if_not_found(term,df):
 	result_df = df[df['course_title'].str.contains(term)]
